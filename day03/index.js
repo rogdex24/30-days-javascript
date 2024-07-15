@@ -48,6 +48,7 @@ switch (score / 10) {
 
 //================================== Activity 4 ==================================
 console.log("\n>activity 4");
+
 const num4 = 32;
 const isEven = num4 % 2 == 0 ? true : false;
 console.log("isEven", isEven);
@@ -55,13 +56,8 @@ console.log("isEven", isEven);
 //================================== Activity 5 ==================================
 console.log("\n>activity 5");
 
-const num5 = 2024;
-let isLeapYear = false;
-if (num5 % 4 == 0) {
-  if (num5 % 100 == 0 && num5 % 400 == 0) { 
-      isLeapYear = true
-  } else {
-    isLeapYear = true;
-  }
-}
+const year = 2024;
+// divisible by 4 but not 100 (or) divisibly by 400
+let isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+
 console.log('isLeapYear', isLeapYear);
